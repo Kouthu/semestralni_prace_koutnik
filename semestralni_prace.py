@@ -32,7 +32,6 @@ def spust_opakovatelnou_analyzu(workspace, hranice, seznam_bodu, velikost_site):
             raise ValueError(f"Chyba: Workspace {workspace} neexistuje!")
 
         # 1. Generování sítě (Tessellation)
-        # Typ sítě jsme změnili na čtverec (SQUARE) dle tvého požadavku
         print(f"\n[1/4] Generuji čtvercovou síť o velikosti {velikost_site}...")
         grid = os.path.join(workspace, "generovana_sit_tess")
         arcpy.management.GenerateTessellation(grid, hranice, "SQUARE", velikost_site)
